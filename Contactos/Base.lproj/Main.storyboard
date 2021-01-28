@@ -56,7 +56,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHi-aB-kqr" customClass="underlined" customModule="Contactos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="143.5" width="280" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPETIR CONTRSEÑA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh6-hH-m5M">
                                         <rect key="frame" x="0.0" y="200" width="280" height="20.5"/>
@@ -67,7 +67,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHN-RQ-WgK" customClass="underlined" customModule="Contactos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="243.5" width="280" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9H-hb-e4N">
                                         <rect key="frame" x="0.0" y="300" width="280" height="40"/>
@@ -78,7 +78,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Registrarse"/>
                                         <connections>
-                                            <segue destination="ILA-Kv-4FZ" kind="show" id="o2A-Qr-HMg"/>
+                                            <action selector="validar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cky-u7-Znx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -101,7 +101,7 @@
                                             <color key="titleColor" red="0.89803921568627454" green="0.45490196078431372" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ILA-Kv-4FZ" kind="show" id="kYF-hi-OQO"/>
+                                            <segue destination="ILA-Kv-4FZ" kind="show" id="2Iy-zc-hbI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -126,17 +126,72 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="2lR-uf-g8H"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="confirmarPassword" destination="zHN-RQ-WgK" id="iFi-Ye-2v4"/>
+                        <outlet property="contraseña" destination="QHi-aB-kqr" id="MHK-bN-4er"/>
+                        <outlet property="email" destination="5yF-0S-fgF" id="C3Y-Sp-xhi"/>
                         <outlet property="registrarseButton" destination="H9H-hb-e4N" id="p2v-V9-xxl"/>
+                        <segue destination="ILA-Kv-4FZ" kind="show" id="9Oq-XL-iXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="634.78260869565224" y="221.65178571428569"/>
+            <point key="canvasLocation" x="-71" y="198"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="K7p-Dh-SQ8">
+            <objects>
+                <viewController id="Qmh-3s-pDF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUb-th-lz0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dFP-yk-b12"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="F2S-rd-C27"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZB-SW-nv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="1637"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Wm3-Br-J1k">
+            <objects>
+                <viewController id="Bfs-mF-wBH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCZ-o7-29u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6QX-ii-uy9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="xU2-3Q-x6g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9f-pR-T1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="988"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GlN-gY-Ru5">
+            <objects>
+                <tabBarController id="T1l-V5-ASa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DzR-pq-bBM"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dyh-ya-9YH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bfs-mF-wBH" kind="relationship" relationship="viewControllers" id="0d8-hv-e73"/>
+                        <segue destination="Qmh-3s-pDF" kind="relationship" relationship="viewControllers" id="mUU-v0-fVD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJs-HL-et5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="1313"/>
         </scene>
         <!--Log In-->
         <scene sceneID="B0c-bp-acI">
             <objects>
-                <viewController id="ILA-Kv-4FZ" customClass="logInController" customModule="Contactos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Second" title="Log In" id="ILA-Kv-4FZ" customClass="logInController" customModule="Contactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y2k-Rb-x32">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7o-Fz-6xr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302.8985507246377" y="223.66071428571428"/>
+            <point key="canvasLocation" x="749" y="207"/>
         </scene>
         <!--Recuperar Contraseña-->
         <scene sceneID="ENN-8w-Ofs">
@@ -282,11 +337,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crY-5p-YSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="222"/>
+            <point key="canvasLocation" x="-816" y="198"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o2A-Qr-HMg"/>
+        <segue reference="9Oq-XL-iXe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="contacto" width="225" height="225"/>
