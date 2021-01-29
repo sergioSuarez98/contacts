@@ -9,4 +9,7 @@ class logInController: UIViewController {
         super.viewDidLoad()
        logInController.layer.cornerRadius = 7
     }
+    @IBAction func goToMain(_ sender: Any) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 }

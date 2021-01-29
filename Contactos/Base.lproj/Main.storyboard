@@ -229,6 +229,10 @@
                                         </constraints>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="goToMain:" destination="ILA-Kv-4FZ" eventType="touchUpInside" id="q1q-3h-Wlg"/>
+                                            <segue destination="T1l-V5-ASa" kind="show" id="XyV-ZE-uem"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8A-J0-jOh">
                                         <rect key="frame" x="0.0" y="277" width="280" height="30"/>
