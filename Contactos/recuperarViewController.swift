@@ -8,6 +8,11 @@
 
 import UIKit
 
-class recuperarViewController: UIVIewController {
+class recuperarViewController: UIViewController {
+    @IBOutlet weak var sendButton: UIButton!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       sendButton.layer.cornerRadius = 7
+    }
 
 }

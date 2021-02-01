@@ -17,6 +17,7 @@
 		7F1BC2EA25C18C2A009728DE /* ContactosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2E925C18C2A009728DE /* ContactosUITests.swift */; };
 		7F1BC2F825C19196009728DE /* underlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2F725C19196009728DE /* underlined.swift */; };
 		7F1BC2FA25C199DE009728DE /* logInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2F925C199DE009728DE /* logInController.swift */; };
+		7F987F9925C82D8600BCD586 /* recuperarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F987F9825C82D8600BCD586 /* recuperarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7F1BC2EB25C18C2A009728DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F1BC2F725C19196009728DE /* underlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = underlined.swift; sourceTree = "<group>"; };
 		7F1BC2F925C199DE009728DE /* logInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInController.swift; sourceTree = "<group>"; };
+		7F987F9825C82D8600BCD586 /* recuperarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recuperarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				7F1BC2D525C18C2A009728DE /* Info.plist */,
 				7F1BC2F725C19196009728DE /* underlined.swift */,
 				7F1BC2F925C199DE009728DE /* logInController.swift */,
+				7F987F9825C82D8600BCD586 /* recuperarViewController.swift */,
 			);
 			path = Contactos;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				7F1BC2F825C19196009728DE /* underlined.swift in Sources */,
 				7F1BC2C825C18C29009728DE /* AppDelegate.swift in Sources */,
 				7F1BC2CA25C18C29009728DE /* SceneDelegate.swift in Sources */,
+				7F987F9925C82D8600BCD586 /* recuperarViewController.swift in Sources */,
 				7F1BC2FA25C199DE009728DE /* logInController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
