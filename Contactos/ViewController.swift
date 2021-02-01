@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var email: underlined!
@@ -44,15 +44,37 @@ class ViewController: UIViewController {
             self.present(alertEmail, animated: true, completion: nil)
         }
         
+        let parameters : [String: String] = [
+            "pass": contraseña.text!,
+            "user": email.text!
+            
+        ]
+        print(parameters)
+        //postRequest()
+        AF.request("https://superapi.netlify.app/api/users", method: .get, parameters: parameters).response{response in debugPrint(response)}
+        /*let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        let parameterEncoder = JSONParameterEncoder(encoder: encoder)*/
     }
     
-    func isValidEmail(_ email: String) -> Bool {
+    func isValidEmail(_ email: String) -> Bool {			
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
     
+    func postRequest(){
+        var sURL :String!
+        sURL = "https://superapi.netlify.app/api/register"
+        let serializer = DataResponseSerializer(emptyResponseCodes: Set([200,204,205]))
+        var sampleRequest = URLRequest(url:URL(string: sURL)!)
+        sampleRequest.httpMethod = HTTPMethod.post.rawValue
+        
+        
+        AF.request(sampleRequest).uploadProgress{progress in}.response(responseSerializer: serializer){response in}
+        
+    }
 
 }
 
