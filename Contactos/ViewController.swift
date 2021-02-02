@@ -51,20 +51,20 @@ class ViewController: UIViewController {
         ]
         print(parameters)
         //postRequest()
-        AF.request("https://superapi.netlify.app/api/users", method: .get, parameters: parameters).response{response in debugPrint(response)}
+        AF.request("https://superapi.netlify.app/api/register", method: .post		, parameters: parameters, encoding: JSONEncoding() as ParameterEncoding).response{response in debugPrint(response)}
         /*let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         let parameterEncoder = JSONParameterEncoder(encoder: encoder)*/
     }
     
     func isValidEmail(_ email: String) -> Bool {			
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        /*let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)*/
+        return true//emailPred.evaluate(with: email)
     }
     
-    func postRequest(){
+    /*func postRequest(){
         var sURL :String!
         sURL = "https://superapi.netlify.app/api/register"
         let serializer = DataResponseSerializer(emptyResponseCodes: Set([200,204,205]))
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         
         AF.request(sampleRequest).uploadProgress{progress in}.response(responseSerializer: serializer){response in}
         
-    }
+    }*/
 
 }
 
