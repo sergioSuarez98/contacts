@@ -50,8 +50,9 @@ class ViewController: UIViewController {
             
         ]
         print(parameters)
+        Request.shared.registerUser(user: parameters)
         //postRequest()
-        AF.request("https://superapi.netlify.app/api/register", method: .post		, parameters: parameters, encoding: JSONEncoding() as ParameterEncoding).response{response in debugPrint(response)}
+        /*AF.request("https://superapi.netlify.app/api/register", method: .post		, parameters: parameters, encoding: JSONEncoding() as ParameterEncoding).response{response in debugPrint(response)}*/
         /*let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         let parameterEncoder = JSONParameterEncoder(encoder: encoder)*/

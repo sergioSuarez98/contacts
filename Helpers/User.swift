@@ -16,11 +16,11 @@ class User : Encodable, Decodable{
     
     enum CodingKeys:String, CodingKey {
         //case _name = "name"
-        case _username = "username"
+        case _username = "user"
         /*case _profilePic = "profile_pic"
         case _email = "email"
         case _surname = "surname"*/
-        case _password = "password"
+        case _password = "pass"
         //case _dateOfBirth = "dateOfBirth"
     }
     
