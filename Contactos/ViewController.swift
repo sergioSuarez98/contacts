@@ -46,7 +46,13 @@ class ViewController: UIViewController {
         
         let parameters : [String: String] = [
             "pass": contraseña.text!,
-            "user": email.text!
+            "user": email.text!,
+            "name": "SergioBroh",
+            "surname":"BuenaHonda",
+            "email": "jesusretrasado@vmail.com",
+            "profile_pic": "revenloco@gmail.com"
+            
+            
             
         ]
         print(parameters)

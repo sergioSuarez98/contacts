@@ -13,14 +13,14 @@ class Endpoints {
     
     static let shared = Endpoints()
     
-    let baseUrl = "https://superapi.netlify.app"
-    
+    //let baseUrl = "https://superapi.netlify.app"
+    let urlServerJose = "http://79.159.179.214/api/users"
     //User´s Petitions
-    let register:String = "/api/register"
-    let login:String = "api/login"
+    let register:String = "register"
+    let login:String = "login"
     let restorePassword:String = "/restore/password"
     let updatePassword:String = "/updatePassword"
     let getProfileInfo:String = "/getProfileInfo"
     let updateProfile:String = "/updateProfile"
-    let all:String = "/api/users"
+    let all:String = "/all"
 }
