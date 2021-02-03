@@ -13,6 +13,7 @@
 		395D8A7325C9B4FD0096A031 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8A7225C9B4FD0096A031 /* Endpoints.swift */; };
 		395D8A7525C9D5B80096A031 /* listViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8A7425C9D5B80096A031 /* listViewController.swift */; };
 		395D8A7725C9EDE60096A031 /* cellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8A7625C9EDE60096A031 /* cellRow.swift */; };
+		39A35FC525CB245D00EAAA5B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A35FC425CB245D00EAAA5B /* DetailViewController.swift */; };
 		39D336AB25C949020031624C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D336AA25C949020031624C /* Request.swift */; };
 		3F894FE4FDFFFBF3C600362D /* Pods_Contactos_ContactosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2344A878628F1ED2EAB4D11E /* Pods_Contactos_ContactosUITests.framework */; };
 		7F1BC2C825C18C29009728DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2C725C18C29009728DE /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		395D8A7225C9B4FD0096A031 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		395D8A7425C9D5B80096A031 /* listViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listViewController.swift; sourceTree = "<group>"; };
 		395D8A7625C9EDE60096A031 /* cellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellRow.swift; sourceTree = "<group>"; };
+		39A35FC425CB245D00EAAA5B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		39D336AA25C949020031624C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7D6ABFB73E99A3E2790EAE8A /* Pods-ContactosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactosTests.debug.xcconfig"; path = "Target Support Files/Pods-ContactosTests/Pods-ContactosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F1BC2C425C18C29009728DE /* Contactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 				3943AA0425C87F2300B72560 /* request.swift */,
 				395D8A7425C9D5B80096A031 /* listViewController.swift */,
 				395D8A7625C9EDE60096A031 /* cellRow.swift */,
+				39A35FC425CB245D00EAAA5B /* DetailViewController.swift */,
 			);
 			path = Contactos;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A35FC525CB245D00EAAA5B /* DetailViewController.swift in Sources */,
 				7F1BC2CC25C18C29009728DE /* ViewController.swift in Sources */,
 				7F1BC2F825C19196009728DE /* underlined.swift in Sources */,
 				7F1BC2C825C18C29009728DE /* AppDelegate.swift in Sources */,

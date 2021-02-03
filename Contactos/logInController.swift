@@ -15,8 +15,8 @@ class logInController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         let parameters : [String: String] = [
             
-                "pass": contraseña.text!,
-                "user": email.text!
+                "password": contraseña.text!,
+                "username": email.text!
                    
         ]
                print(parameters)

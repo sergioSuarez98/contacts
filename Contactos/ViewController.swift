@@ -44,24 +44,21 @@ class ViewController: UIViewController {
             self.present(alertEmail, animated: true, completion: nil)
         }
         
-        let parameters : [String: String] = [
+        /*let parameters : [String: String] = [
             "pass": contraseña.text!,
             "user": email.text!,
-            "name": "SergioBroh",
-            "surname":"BuenaHonda",
-            "email": "jesusretrasado@vmail.com",
-            "profile_pic": "revenloco@gmail.com"
+            "name": email.text!,
+            "surname":email.text!,
+            "email": email.text!,
+            "profile_pic": email.text!
             
             
             
-        ]
-        print(parameters)
-        Request.shared.registerUser(user: parameters)
-        //postRequest()
-        /*AF.request("https://superapi.netlify.app/api/register", method: .post		, parameters: parameters, encoding: JSONEncoding() as ParameterEncoding).response{response in debugPrint(response)}*/
-        /*let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
-        let parameterEncoder = JSONParameterEncoder(encoder: encoder)*/
+        ]*/
+    
+        let user = User.init(username: email.text!, email: email.text!, name:  "funciona", surname: email.text!, profilePic: email.text!,password: contraseña.text!)
+        Request.shared.registerUser(user: user)
+        print(user)
     }
     
     func isValidEmail(_ email: String) -> Bool {			

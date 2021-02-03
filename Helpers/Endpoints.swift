@@ -16,8 +16,8 @@ class Endpoints {
     //let baseUrl = "https://superapi.netlify.app"
     let urlServerJose = "http://79.159.179.214/api/users"
     //User´s Petitions
-    let register:String = "register"
-    let login:String = "login"
+    let register:String = "/register"
+    let login:String = "/login"
     let restorePassword:String = "/restore/password"
     let updatePassword:String = "/updatePassword"
     let getProfileInfo:String = "/getProfileInfo"

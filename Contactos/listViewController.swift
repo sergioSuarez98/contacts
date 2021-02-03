@@ -51,7 +51,17 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //.picture.image = quesos[indexPath.row].image*/
         return cell
     }
-    
+    // Este método se ejecuta cuando se pulsa una celda
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = users[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: selectedItem)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! DetailViewController
+       
+        destination.userData = sender as? User
+        
+    }
 
 }
 
