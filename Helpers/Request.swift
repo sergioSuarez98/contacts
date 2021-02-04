@@ -40,5 +40,11 @@ static let shared = Request	()
         }
     }
   
+    func profileInfo(parameters:[String:String]) -> DataRequest {
 
+        //let headers:HTTPHeaders = ["api_token":api_token]
+        
+        return AF.request(Endpoints.shared.urlServerJose + Endpoints.shared.getProfileInfo, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: nil)
+
+    }
 }

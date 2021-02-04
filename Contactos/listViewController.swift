@@ -31,7 +31,7 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     JSONDecoder().decode([User].self, from: data)
                 self.tableView.reloadData()
             }catch{
-                print(data)
+                print("Error decoding == \(error)")
             }
         }
         //print(data)

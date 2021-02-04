@@ -7,11 +7,13 @@ class logInController: UIViewController {
     
     @IBOutlet weak var email: underlined!
     @IBOutlet weak var contraseña: underlined!
-    let alertUser = UIAlertController(title: "Algo salió mal", message: "Usuario no encontrado", preferredStyle: .alert)
+    let alertUser = UIAlertController(title: "Algo salió mal", message: "Usuario o contraseña no válidos", preferredStyle: .alert)
      
     override func viewDidLoad() {
         super.viewDidLoad()
        logInController.layer.cornerRadius = 7
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     @IBAction func goToMain(_ sender: Any) {
         /*navigationController?.setNavigationBarHidden(true, animated: true)*/
@@ -23,14 +25,28 @@ class logInController: UIViewController {
                    
         ]
                print(parameters)
-        Request.shared.login(parameters: parameters).responseJSON{ response in
-            if(response.response?.statusCode == 200){
+            Request.shared.login(parameters: parameters).responseJSON{ response in
+            
+            let body = response.value as? String
+            let bodySplitted = body?.split(separator: " ")
+            let api_token = bodySplitted![1]
+            
+            
+            
+            
+            if(response.value! as! String != "Wrong user or password" || response.value! as! String != "No user" ){
                 self.performSegue(withIdentifier: "main", sender: sender)
-            } else {
+                UserDefaults.standard.set(api_token, forKey: "api_token")
+                print(UserDefaults.standard.string(forKey: "api_token")!)
+                } else {
                 self.alertUser.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(self.alertUser, animated: true, completion: nil)
             }
         }
             
         
     }
+    @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
 }

@@ -20,7 +20,8 @@ class Endpoints {
     let login:String = "/login"
     let restorePassword:String = "/restore/password"
     let updatePassword:String = "/updatePassword"
-    let getProfileInfo:String = "/getProfileInfo"
+    let getProfileInfo:String = "/profile/info"
     let updateProfile:String = "/updateProfile"
     let all:String = "/all"
+    let delete:String = "/delete"
 }
