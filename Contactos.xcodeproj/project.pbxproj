@@ -16,6 +16,7 @@
 		39A35FC525CB245D00EAAA5B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A35FC425CB245D00EAAA5B /* DetailViewController.swift */; };
 		39D336AB25C949020031624C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D336AA25C949020031624C /* Request.swift */; };
 		3F894FE4FDFFFBF3C600362D /* Pods_Contactos_ContactosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2344A878628F1ED2EAB4D11E /* Pods_Contactos_ContactosUITests.framework */; };
+		7F117CC625CC2E8B005371E5 /* PASTOROF.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7F117CC525CC2E8B005371E5 /* PASTOROF.TTF */; };
 		7F1BC2C825C18C29009728DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2C725C18C29009728DE /* AppDelegate.swift */; };
 		7F1BC2CA25C18C29009728DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2C925C18C29009728DE /* SceneDelegate.swift */; };
 		7F1BC2CC25C18C29009728DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC2CB25C18C29009728DE /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		39A35FC425CB245D00EAAA5B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		39D336AA25C949020031624C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7D6ABFB73E99A3E2790EAE8A /* Pods-ContactosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactosTests.debug.xcconfig"; path = "Target Support Files/Pods-ContactosTests/Pods-ContactosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F117CC525CC2E8B005371E5 /* PASTOROF.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = PASTOROF.TTF; sourceTree = "<group>"; };
 		7F1BC2C425C18C29009728DE /* Contactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1BC2C725C18C29009728DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1BC2C925C18C29009728DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,9 +133,18 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		7F117CC425CC2DAD005371E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7F117CC525CC2E8B005371E5 /* PASTOROF.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7F1BC2BB25C18C29009728DE = {
 			isa = PBXGroup;
 			children = (
+				7F117CC425CC2DAD005371E5 /* Fonts */,
 				39D336A925C948800031624C /* Helpers */,
 				7F1BC2C625C18C29009728DE /* Contactos */,
 				7F1BC2DD25C18C2A009728DE /* ContactosTests */,
@@ -317,6 +328,7 @@
 			files = (
 				7F1BC2D425C18C2A009728DE /* LaunchScreen.storyboard in Resources */,
 				7F1BC2D125C18C2A009728DE /* Assets.xcassets in Resources */,
+				7F117CC625CC2E8B005371E5 /* PASTOROF.TTF in Resources */,
 				7F1BC2CF25C18C29009728DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

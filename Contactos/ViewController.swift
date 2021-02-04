@@ -11,11 +11,13 @@ import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var email: underlined!
-    let alert = UIAlertController(title: "Algo salió mal", message: "Las contraseñas no coinciden", preferredStyle: .alert)
+    
     let alertEmail = UIAlertController(title: "Algo salió mal", message: "Email no valido", preferredStyle: .alert)
     @IBOutlet weak var confirmarPassword: underlined!
     @IBOutlet weak var registrarseButton: UIButton!
     @IBOutlet weak var contraseña: underlined!
+    @IBOutlet weak var name: underlined!
+    @IBOutlet weak var surname: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         registrarseButton.layer.cornerRadius = 7
@@ -24,18 +26,13 @@ class ViewController: UIViewController {
     @IBAction func validar(_ sender: Any) {
         
         if(isValidEmail(email.text ?? " ")){
-        if(confirmarPassword.text == contraseña.text ){
+        
            
             if let secondVc = storyboard?.instantiateViewController(withIdentifier: "Second") {
                 navigationController?.pushViewController(secondVc, animated: true)
             }
-        }else{
-            print("email no valido")
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-            // 4. Present the alert.
-            self.present(alert, animated: true, completion: nil)
-        }
+        
+        
         }else{
             print("Deberia salir error de email")
             alertEmail.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -56,16 +53,16 @@ class ViewController: UIViewController {
             
         ]*/
     
-        let user = User.init(username: email.text!, email: email.text!, name:  "funciona", surname: email.text!, profilePic: email.text!,password: contraseña.text!)
+        let user = User.init(username: confirmarPassword.text!, email: email.text!, name:  name.text!, surname: surname.text!, profilePic: email.text!,password: contraseña.text!)
         Request.shared.registerUser(user: user)
         print(user)
     }
     
     func isValidEmail(_ email: String) -> Bool {			
-        /*let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)*/
-        return true//emailPred.evaluate(with: email)
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
     
     /*func postRequest(){

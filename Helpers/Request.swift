@@ -26,12 +26,11 @@ static let shared = Request	()
         }
     }
     
-    func restorePassword(parameters:[String:String]) {
+    func restorePassword(parameters:[String:String]) -> DataRequest {
 
-        AF.request(Endpoints.shared.urlServerJose+Endpoints.shared.restorePassword, method: .post, parameters:parameters , encoder: JSONParameterEncoder.default).response { response in
-            debugPrint(response)
+       return AF.request(Endpoints.shared.urlServerJose+Endpoints.shared.restorePassword, method: .post, parameters:parameters , encoder: JSONParameterEncoder.default)
         
-        }
+        
     }
     
     func login(parameters:[String:String])  -> DataRequest{
