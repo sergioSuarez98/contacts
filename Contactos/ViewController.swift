@@ -21,6 +21,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registrarseButton.layer.cornerRadius = 7
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.dismissKeyboard))
+               view.addGestureRecognizer(tap)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false	, animated: true)
     }
     
     @IBAction func validar(_ sender: Any) {
@@ -41,18 +47,7 @@ class ViewController: UIViewController {
             self.present(alertEmail, animated: true, completion: nil)
         }
         
-        /*let parameters : [String: String] = [
-            "pass": contraseña.text!,
-            "user": email.text!,
-            "name": email.text!,
-            "surname":email.text!,
-            "email": email.text!,
-            "profile_pic": email.text!
-            
-            
-            
-        ]*/
-    
+       
         let user = User.init(username: confirmarPassword.text!, email: email.text!, name:  name.text!, surname: surname.text!, profilePic: email.text!,password: contraseña.text!)
         Request.shared.registerUser(user: user)
         print(user)
@@ -65,17 +60,9 @@ class ViewController: UIViewController {
         return emailPred.evaluate(with: email)
     }
     
-    /*func postRequest(){
-        var sURL :String!
-        sURL = "https://superapi.netlify.app/api/register"
-        let serializer = DataResponseSerializer(emptyResponseCodes: Set([200,204,205]))
-        var sampleRequest = URLRequest(url:URL(string: sURL)!)
-        sampleRequest.httpMethod = HTTPMethod.post.rawValue
-        
-        
-        AF.request(sampleRequest).uploadProgress{progress in}.response(responseSerializer: serializer){response in}
-        
-    }*/
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }
 

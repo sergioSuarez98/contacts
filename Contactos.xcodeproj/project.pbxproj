@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0BAC4D089D598128B0A660EC /* Pods_ContactosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9B6B7EFF03C343FD892C79 /* Pods_ContactosTests.framework */; };
 		3906375A25CC84DE00A18B93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906375925CC84DE00A18B93 /* ProfileViewController.swift */; };
-		3943AA0525C87F2300B72560 /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943AA0425C87F2300B72560 /* request.swift */; };
 		3943AA0725C8889B00B72560 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943AA0625C8889B00B72560 /* User.swift */; };
 		395D8A7325C9B4FD0096A031 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8A7225C9B4FD0096A031 /* Endpoints.swift */; };
 		395D8A7525C9D5B80096A031 /* listViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D8A7425C9D5B80096A031 /* listViewController.swift */; };
@@ -55,7 +54,6 @@
 		26519610C47A48872AD90EB1 /* Pods-Contactos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contactos.debug.xcconfig"; path = "Target Support Files/Pods-Contactos/Pods-Contactos.debug.xcconfig"; sourceTree = "<group>"; };
 		340EB4DBC284D77F16A9DB88 /* Pods_Contactos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contactos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3906375925CC84DE00A18B93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		3943AA0425C87F2300B72560 /* request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 		3943AA0625C8889B00B72560 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		395D8A7225C9B4FD0096A031 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		395D8A7425C9D5B80096A031 /* listViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listViewController.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				7F1BC2F725C19196009728DE /* underlined.swift */,
 				7F1BC2F925C199DE009728DE /* logInController.swift */,
 				7F987F9825C82D8600BCD586 /* recuperarViewController.swift */,
-				3943AA0425C87F2300B72560 /* request.swift */,
 				395D8A7425C9D5B80096A031 /* listViewController.swift */,
 				395D8A7625C9EDE60096A031 /* cellRow.swift */,
 				39A35FC425CB245D00EAAA5B /* DetailViewController.swift */,
@@ -465,7 +462,6 @@
 				7F1BC2F825C19196009728DE /* underlined.swift in Sources */,
 				7F1BC2C825C18C29009728DE /* AppDelegate.swift in Sources */,
 				3906375A25CC84DE00A18B93 /* ProfileViewController.swift in Sources */,
-				3943AA0525C87F2300B72560 /* request.swift in Sources */,
 				395D8A7325C9B4FD0096A031 /* Endpoints.swift in Sources */,
 				3943AA0725C8889B00B72560 /* User.swift in Sources */,
 				395D8A7525C9D5B80096A031 /* listViewController.swift in Sources */,

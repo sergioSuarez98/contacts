@@ -46,4 +46,7 @@ class recuperarViewController: UIViewController {
     
         
     }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
