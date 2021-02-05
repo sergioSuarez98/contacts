@@ -7,11 +7,12 @@ class logInController: UIViewController {
     
     @IBOutlet weak var email: underlined!
     @IBOutlet weak var contraseña: underlined!
-    let alertUser = UIAlertController(title: "Algo salió mal", message: "Usuario o contraseña no válidos", preferredStyle: .alert)
+   
      
     override func viewDidLoad() {
         super.viewDidLoad()
-       logInController.layer.cornerRadius = 7
+        UserDefaults.standard.removeObject(forKey: "api_token")
+        logInController.layer.cornerRadius = 7
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -34,13 +35,14 @@ class logInController: UIViewController {
             
             
             
-            if(response.value! as! String != "Wrong user or password" || response.value! as! String != "No user" ){
+            if(response.value! as! String != "Wrong user or password" && response.value! as! String != "No user" ){
                 self.performSegue(withIdentifier: "main", sender: sender)
                 UserDefaults.standard.set(api_token, forKey: "api_token")
                 print(UserDefaults.standard.string(forKey: "api_token")!)
                 } else {
-                self.alertUser.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(self.alertUser, animated: true, completion: nil)
+                let alertUser = UIAlertController(title: "Algo salió mal", message: "Usuario o contraseña no válidos", preferredStyle: .alert)
+                alertUser.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertUser, animated: true, completion: nil)
             }
         }
             

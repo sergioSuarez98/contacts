@@ -47,4 +47,16 @@ static let shared = Request	()
         return AF.request(Endpoints.shared.urlServerJose + Endpoints.shared.getProfileInfo, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: nil)
 
     }
+    func changePassword(parameters:[String:String]) -> DataRequest {
+            
+            return AF.request(Endpoints.shared.urlServerJose + Endpoints.shared.updatePassword, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: nil)
+
+    }
+    
+    func delete(parameters:[String:String]) -> DataRequest {
+            
+            return AF.request(Endpoints.shared.urlServerJose + Endpoints.shared.delete, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: nil)
+
+    }
+    
 }

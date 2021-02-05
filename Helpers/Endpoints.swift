@@ -19,9 +19,8 @@ class Endpoints {
     let register:String = "/register"
     let login:String = "/login"
     let restorePassword:String = "/restore/password"
-    let updatePassword:String = "/updatePassword"
+    let updatePassword:String = "/update/password"
     let getProfileInfo:String = "/profile/info"
-    let updateProfile:String = "/updateProfile"
     let all:String = "/all"
-    let delete:String = "/delete"
+    let delete:String = "/remove"
 }
